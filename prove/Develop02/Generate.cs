@@ -12,16 +12,16 @@ public class Generate
             //Console.WriteLine($"{promptNum}"); //**used for testing. WORKS!
             
             List<string> prompts = new List<string>();
-            prompts.Add("Prompt1");
-            prompts.Add("Prompt2");
-            prompts.Add("Prompt3");
-            prompts.Add("Prompt4");
-            prompts.Add("Prompt5");
-            prompts.Add("Prompt6");
-            prompts.Add("Prompt7");
-            prompts.Add("Prompt8");
-            prompts.Add("Prompt9");
-            prompts.Add("Prompt10");
+            prompts.Add("What happened today?");
+            prompts.Add("What was the best thing that happened today?");
+            prompts.Add("What was the worst thing that happened today?");
+            prompts.Add("What was the most interesting thing I saw or heard today?");
+            prompts.Add("What was the most challenging thing I faced today?");
+            prompts.Add("What am I grateful for today?");
+            prompts.Add("What did I learn today?");
+            prompts.Add("What was the most fun thing I did today?");
+            prompts.Add("What was the most surprising thing that happened today?");
+            prompts.Add("What did I do today that I am proud of?");
 
             string prompt = prompts[promptNum];
 
