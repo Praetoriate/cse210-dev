@@ -19,14 +19,30 @@ class Program
             //Console.WriteLine(selection); **For testing, WORKED
 
             if (selection == 1) //Write
-            {
-                thisJournal.AddEntry();
-            }
+                {
+                    thisJournal.AddEntry();
+                }
+
+            if (selection == 2) //Display
+                {
+                    thisJournal.Display();
+                }
+
+            if (selection == 3) //Load
+                {
+                    thisJournal.Load();
+                }
+
+            if (selection == 4) //Save
+                {
+                    thisJournal.Save();
+                }
 
             if (selection == 5) //Quit
-            {
-                cont = false;
-            }
+                {
+                    Console.WriteLine("\nSee you tomorrow!");
+                    cont = false;
+                }
 
         }
     } 
