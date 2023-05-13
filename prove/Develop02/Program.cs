@@ -28,14 +28,14 @@ class Program
                     thisJournal.Display();
                 }
 
-            if (selection == 3) //Load
+            if (selection == 3) //Load 
                 {
-                    thisJournal.Load();
+                    thisJournal.Load(); //***Correctly handles ',' characters reading and writing from a .csv***
                 }
 
             if (selection == 4) //Save
                 {
-                    thisJournal.Save();
+                    thisJournal.Save(); //***Correctly handles ',' characters reading and writing from a .csv***
                 }
 
             if (selection == 5) //Quit

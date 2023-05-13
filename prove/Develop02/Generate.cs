@@ -26,6 +26,7 @@ public class Generate
             string prompt = prompts[promptNum];
 
             return prompt;
+            
         }
     
     
