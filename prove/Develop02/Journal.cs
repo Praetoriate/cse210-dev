@@ -6,7 +6,7 @@ public class Journal
     {
     }
 
-    public List<Entry> entries = new List<Entry>();
+    public List<Entry> _entries = new List<Entry>();
 
     public void AddEntry()
         {
@@ -24,13 +24,13 @@ public class Journal
             entry._userInput = Entry.Input();
 
             entry.Display();
-            entries.Add(entry);
+            _entries.Add(entry);
 
         }
 
     public void Display()
         {
-            foreach (Entry entry in entries)
+            foreach (Entry entry in _entries)
             {
                 entry.Display();
             }
@@ -40,7 +40,7 @@ public class Journal
         {
             Console.WriteLine("Please enter the filename of your journal file (eg. Journal.csv): ");
             string fileName = Console.ReadLine();
-            entries.Clear();
+            _entries.Clear();
 
             string[] lines = System.IO.File.ReadAllLines(fileName);
 
@@ -55,12 +55,12 @@ public class Journal
                 string editstring = parts[2];
                 entry._userInput = editstring.Replace('|',',');
 
-                entries.Add(entry);
+                _entries.Add(entry);
 
             }
 
             Console.WriteLine($"{fileName} has been loaded.");
-            return entries;
+            return _entries;
 
         }
 
@@ -71,7 +71,7 @@ public class Journal
             Console.WriteLine("Saving to file... ");
             using (StreamWriter output = new StreamWriter(fileName))
                 {   
-                    foreach (Entry entry in entries)
+                    foreach (Entry entry in _entries)
                     {
                         string editstring = entry._userInput;
                         editstring = editstring.Replace(',','|');

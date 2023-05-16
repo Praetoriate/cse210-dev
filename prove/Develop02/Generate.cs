@@ -8,7 +8,7 @@ public class Generate
     // selects from a list of 10 prompts and returns the randomly selected prompt.
         {
             Random rando = new Random();
-            int promptNum = rando.Next(1, 11);
+            //int promptNum = rando.Next(1, 11);
             //Console.WriteLine($"{promptNum}"); //**used for testing. WORKS!
             
             List<string> prompts = new List<string>();
@@ -22,6 +22,8 @@ public class Generate
             prompts.Add("What was the most fun thing I did today?");
             prompts.Add("What was the most surprising thing that happened today?");
             prompts.Add("What did I do today that I am proud of?");
+
+            int promptNum = rando.Next(prompts.Count());
 
             string prompt = prompts[promptNum];
 

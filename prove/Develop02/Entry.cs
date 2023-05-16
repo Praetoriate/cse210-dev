@@ -1,9 +1,9 @@
 
 public class Entry
 {
-    public string _date { get; set; }
-    public string _prompt { get; set; }
-    public string _userInput { get; set; }
+    public string _date;
+    public string _prompt;
+    public string _userInput;
     public Entry()
     {        
     }            
@@ -18,7 +18,7 @@ public class Entry
 
     public void Display()
         {
-            Console.WriteLine($"\nYour latest entry:\nDate: {_date} - Prompt: {_prompt}\n{_userInput}");
+            Console.WriteLine($"\nDate: {_date} - Prompt: {_prompt}\n{_userInput}");
         }
 
 }
