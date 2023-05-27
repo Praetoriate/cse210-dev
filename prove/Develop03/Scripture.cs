@@ -111,12 +111,6 @@ public class Scripture
                     }
                 string assembledString = string.Join(" ", tempWords);
                 _text = assembledString;
-
-                //Display list of Word objects and their attributes ***DELETE AFTER TESTING***
-                // foreach (Word word in _wordList)
-                //     {
-                //         Console.WriteLine($"{word.GetWord()} {word.GetHide()}");
-                //     }
                 
             }
 
