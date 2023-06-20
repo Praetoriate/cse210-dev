@@ -1,9 +1,9 @@
 public class Circle : Shape
 {
-    public Circle(string colour, double rad) : base (colour)
-        {
-            _radius = rad;
-        }
+    public Circle(string colour, double rad) : base(colour)
+    {
+        _radius = rad;
+    }
     private double _radius;
     public override double GetArea()
     {
