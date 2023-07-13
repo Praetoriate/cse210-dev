@@ -3,9 +3,13 @@ public class SingleTank : Tank
     //ATTRIBUTES
 
     //CONSTRUCTORS
-
-    //GETS & SETS
+    public SingleTank(float height)
+    {
+        _height = height;
+    }
     
+    //GETS & SETS
+
     //METHODS
 
 }

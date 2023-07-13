@@ -4,8 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        //System Assets
-        BoosterPump boosterA = new BoosterPump();
+        Console.Clear();
+        
+        Player system = new Player();
+        Logger log = new Logger();
 
         //Menu Looop
         int option = 0;
@@ -13,30 +15,26 @@ class Program
         while (option != 5)
         {
             Console.Clear();
-            Console.WriteLine("Sample Water System SCADA\n");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Sample Water System SCADA");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("(System is 'paused' while system is not showing)\n");
+            Console.ForegroundColor = ConsoleColor.White;
+
             Console.WriteLine("Menu Options:\n  1. Show System\n  2. History\n  3. Current Alarms\n  4. Controls\n  5. Quit");
-            Console.Write("Select a choice from the menu (1-5): ");
+            Console.Write("\nSelect a choice from the menu (1-5): ");
             string i = Console.ReadLine();
             option = int.Parse(i);
 
             if (option == 1) //Show System
             {
-
-                Console.Clear();
-                Console.WriteLine("This is where you'll see the current state of all the objects\n");
-
-                Console.Write($"Booster A: ");
-                boosterA.PrintStatus();
-
-                Console.WriteLine("\nPress any key to return to the Main Menu...");
-                Console.ReadKey();
+                system.SimulateSystem();
 
             }
 
             if (option == 2) //History
             {
-                Console.Clear();
-
+                log.ReadHistory();
             }
 
             if (option == 3) //Current Alarms
@@ -46,28 +44,7 @@ class Program
 
             if (option == 4) //Controls
             {
-                int control = 0;
-
-                Console.Clear();
-                Console.Write("Booster A Control\n\nCurrently: ");
-                boosterA.PrintStatus();
-                Console.WriteLine("\nMenu Options:\n  1. Turn on\n  2. Turn off\n  3. Cancel");
-                Console.Write("Select a choice from the menu (1-3): ");
-                string j = Console.ReadLine();
-                control = int.Parse(j);
-
-                if (control == 1)
-                {
-                    boosterA.SetRunCmd(true);
-                    boosterA.RunLogic();
-                }
-
-                if (control == 2)
-                {
-                    boosterA.SetRunCmd(false);
-                    boosterA.RunLogic();
-                }
-
+                system.Controls();
             }
 
             if (option == 5) //Quit

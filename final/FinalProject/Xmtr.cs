@@ -23,6 +23,11 @@ public class Xmtr
         _currentValue = cv;
     }
 
+    public float GetCV()
+    {
+        return _currentValue;
+    }
+
     //METHODS
 
 }
