@@ -228,7 +228,12 @@ public class Player
         while (option != 4)
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Pump Manual Controls\n");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("(System is 'paused' while system is not showing)\n");
+            Console.ForegroundColor = ConsoleColor.White;
+
             Console.WriteLine("Menu Options:\n  1. Well 1\n  2. Booster A\n  3. Booster B\n  4. Return to Main Menu");
             Console.Write("\nSelect a choice from the menu (1-4): ");
             string i = Console.ReadLine();

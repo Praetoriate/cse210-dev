@@ -23,7 +23,7 @@ public class Pump
         {
             status = "Running";
         }
-        
+
         return status;
     }
 
@@ -44,7 +44,7 @@ public class Pump
     //METHODS
     public virtual void RunLogic()
     {
-        
+
     }
 
 }

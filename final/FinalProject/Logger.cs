@@ -17,6 +17,18 @@ public class Logger
         int historySelect = 0;
         string filePath = "history.csv";
 
+        string text = File.ReadAllText(filePath);
+
+        List<string> lines = new List<string>();
+
+        using (StreamReader reader = new StreamReader(filePath))
+        {
+            while (!reader.EndOfStream)
+            {
+                lines.Add(reader.ReadLine());
+            }
+        }
+
         while (historySelect != 8)
         {
             Console.Clear();
@@ -32,31 +44,22 @@ public class Logger
 
             if (historySelect == 1)
             {
-                string text = File.ReadAllText(filePath);
+                foreach (string line in lines)
+                {
+                    string[] dataPoints = line.Split(",");
+                    Console.WriteLine($"{dataPoints[0],20}{dataPoints[1],15}{dataPoints[2],12}{dataPoints[3],15}{dataPoints[4],17}{dataPoints[5],17}{dataPoints[6],15}{dataPoints[7],15}");
+                }
 
-                Console.WriteLine(text);
                 Console.WriteLine("\nPress any key to return to the main menu...");
                 Console.ReadKey();
             }
 
             if (historySelect == 2)
             {
-                string text = File.ReadAllText(filePath);
-
-                List<string> lines = new List<string>();
-
-                using (StreamReader reader = new StreamReader(filePath))
-                {
-                    while (!reader.EndOfStream)
-                    {
-                        lines.Add(reader.ReadLine());
-                    }
-                }
-
                 foreach (string line in lines)
                 {
                     string[] dataPoints = line.Split(",");
-                    Console.WriteLine($"{dataPoints[0],25}, {dataPoints[1],15}, {dataPoints[2],10}");
+                    Console.WriteLine($"{dataPoints[0],20}{dataPoints[1],15}{dataPoints[2],12}");
                 }
 
                 Console.WriteLine("\nPress any key to return to the main menu...");
@@ -65,27 +68,63 @@ public class Logger
 
             if (historySelect == 3)
             {
+                foreach (string line in lines)
+                {
+                    string[] dataPoints = line.Split(",");
+                    Console.WriteLine($"{dataPoints[0],20}{dataPoints[3],15}");
+                }
+
+                Console.WriteLine("\nPress any key to return to the main menu...");
+                Console.ReadKey();
 
             }
 
             if (historySelect == 4)
             {
+                foreach (string line in lines)
+                {
+                    string[] dataPoints = line.Split(",");
+                    Console.WriteLine($"{dataPoints[0],20}{dataPoints[4],17}");
+                }
 
+                Console.WriteLine("\nPress any key to return to the main menu...");
+                Console.ReadKey();
             }
 
             if (historySelect == 5)
             {
+                foreach (string line in lines)
+                {
+                    string[] dataPoints = line.Split(",");
+                    Console.WriteLine($"{dataPoints[0],20}{dataPoints[5],17}");
+                }
 
+                Console.WriteLine("\nPress any key to return to the main menu...");
+                Console.ReadKey();
             }
 
             if (historySelect == 6)
             {
+                foreach (string line in lines)
+                {
+                    string[] dataPoints = line.Split(",");
+                    Console.WriteLine($"{dataPoints[0],20}{dataPoints[6],15}");
+                }
 
+                Console.WriteLine("\nPress any key to return to the main menu...");
+                Console.ReadKey();
             }
 
             if (historySelect == 7)
             {
+                foreach (string line in lines)
+                {
+                    string[] dataPoints = line.Split(",");
+                    Console.WriteLine($"{dataPoints[0],20}{dataPoints[7],15}");
+                }
 
+                Console.WriteLine("\nPress any key to return to the main menu...");
+                Console.ReadKey();
             }
 
             if (historySelect == 8)

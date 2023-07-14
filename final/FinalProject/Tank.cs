@@ -2,7 +2,6 @@ public class Tank
 {
     //ATTRIBUTES
     private float _level;
-    private bool _intrusion;
     protected float _height;
 
     Xmtr level = new Xmtr(0);

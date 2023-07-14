@@ -7,7 +7,7 @@ public class SingleTank : Tank
     {
         _height = height;
     }
-    
+
     //GETS & SETS
 
     //METHODS
