@@ -1,7 +1,6 @@
 public class BoosterPump : Pump
 {
     //ATTRIBUTES
-    private Xmtr _pumpPSI;
 
     //CONSTRUCTORS
 
@@ -20,7 +19,7 @@ public class BoosterPump : Pump
             _running = false;
         }
 
-        
+
     }
 
 }
